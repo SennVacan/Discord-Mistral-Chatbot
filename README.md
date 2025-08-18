@@ -1,6 +1,3 @@
-Here’s a polished and structured `README.md` based on what you provided:
-
-````markdown
 # Discord-Mistral-Chatbot
 
 A Discord chatbot powered by the Mistral AI model using Nextcord.
@@ -18,7 +15,7 @@ Install required libraries using pip:
 
 ```bash
 pip install nextcord mistralai
-````
+```
 
 ---
 
@@ -54,7 +51,4 @@ Your Discord bot should now be up and running!
 
 [MIT](LICENSE)
 
-```
 
-If you want, I can also add a **Usage Example** section showing how to interact with the bot, which makes your README more friendly for beginners. Do you want me to add that?
-```
