@@ -51,7 +51,7 @@ The bot uses a JSON configuration file (`config.json`). Here's what each section
 
 Once running, the bot will respond to:
 - Mentions of the bot
-- Messages containing "marwat" (case insensitive)
+- Messages containing "BOT"S NAME THAT YOU SET" (case insensitive)
 - Slash commands for managing facts, jokes, and system prompt
 
 ## Slash Commands
@@ -70,5 +70,6 @@ You can customize:
 - The system prompt in `system_prompt.json`
 - Memory limits in `config.json`
 - AI model and behavior in `config.json`
+
 
 
