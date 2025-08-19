@@ -1,4 +1,4 @@
-# Safi AI Bot
+# AI Bot
 
 A Discord bot with AI capabilities for conversation, memory, and customization.
 
@@ -70,4 +70,5 @@ You can customize:
 - The system prompt in `system_prompt.json`
 - Memory limits in `config.json`
 - AI model and behavior in `config.json`
+
 
