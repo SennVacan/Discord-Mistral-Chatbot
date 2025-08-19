@@ -78,10 +78,10 @@ def load_system_prompt() -> str:
             with open(PROMPT_FILE, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return data.get("prompt", "")
-        return "Your name is Kattar peshawri Marwat Pashtun. You're from Peshawar, Pakistan. You're a Pathan. Don't use emojis much. Be mysterious and talk in Urdu and Pashto."
+        return "IM AI BOT MADE BY SENN."  #CHANGE THIS TO WHAT YOU WANT IT TO THINK BY DEFAULT
     except Exception as e:
         logging.error(f"Error loading system prompt: {str(e)}")
-        return "Your name is Kattar peshawri Marwat Pashtun. You're from Peshawar, Pakistan. You're a Pathan. Don't use emojis much. Be mysterious and talk in Urdu and Pashto."
+        return "IM AI BOT MADE BY SENN."  #CHANGE THIS TO WHAT YOU WANT IT TO THINK BY DEFAULT
 
 def save_system_prompt(prompt: str) -> None:
     """
@@ -449,7 +449,7 @@ async def on_message(message: nextcord.Message) -> None:
     await add_message(str(message.channel.id), str(message.author.id), message.content, message_id, reference_id)
 
     # Trigger only if bot mentioned or keyword
-    if not client.user or not client.user.mentioned_in(message) and "marwat" not in message.content.lower():
+    if not client.user or not client.user.mentioned_in(message) and "WORD TRIGGER" not in message.content.lower(): #CHANGE "WORD TIRGGER" TO WHATEVER YOUR BOT'S GONNA RESPOND WHEN SAID TRIGGER WORD 
         return
 
     # Replace mentions for readability
@@ -568,8 +568,8 @@ Recent conversation:
             Recent conversation:
             {message.author.display_name}: {message.content[:300]}
 
-            Respond concisely as Kattar peshawri Marwat Pashtun.
-            """
+            Respond concisely as AI BOT BY SENN. 
+            """ #CHANGE THE THE ABOVE LAST LINE TO UR BOT'S NAME
             prompt_to_use = optimized_prompt
         else:
             prompt_to_use = prompt_for_ai
@@ -593,7 +593,7 @@ Recent conversation:
                     answer = str(choice.message.content)
                     # Basic string operations with safety checks
                     if isinstance(answer, str):
-                        answer = answer.replace("Mistral AI", "Kattar peshawri Marwat Pashtun")
+                        answer = answer.replace("Mistral AI", "AI BOT") #CHANGE THIS TO WHAT YOUR BOT NAME IS
                         # Limit response length according to configuration
                         if len(answer) > MAX_RESPONSE_LENGTH:
                             answer = answer[:MAX_RESPONSE_LENGTH-3] + "..."
@@ -647,4 +647,5 @@ if __name__ == "__main__":
         client.run(DISCORD_BOT_TOKEN)
     except Exception as e:
         logging.error(f"Failed to start bot: {str(e)}")
+
         raise
