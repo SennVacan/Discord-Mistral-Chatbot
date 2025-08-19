@@ -1,0 +1,25 @@
+# Ignore sensitive files
+config.json
+*.db
+*.db-journal
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+.DS_Store
+
+# Ignore local database files
+chat_memory.db
+custom_memory.json
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -1,54 +1,73 @@
-# Discord-Mistral-Chatbot
+# Safi AI Bot
 
-A Discord chatbot powered by the Mistral AI model using Nextcord.
-
----
-
-## Requirements
-
-- Python 3.8+
-- Libraries:
-  - [Nextcord](https://pypi.org/project/nextcord/)
-  - [Mistralai](https://pypi.org/project/mistralai/)
-
-Install required libraries using pip:
-
-```bash
-pip install nextcord mistralai
-```
-
----
-
-## Setup
-
-1. Get your Mistral API key from [Mistral Console](https://console.mistral.ai/api-keys).
-
-2. Open the bot code and insert your:
-
-   * **Discord Bot Token**
-   * **Mistral API Key**
-     in the indicated sections of the code.
-
-3. Run the bot:
-
-```bash
-python main.py
-```
-
-Your Discord bot should now be up and running!
-
----
+A Discord bot with AI capabilities for conversation, memory, and customization.
 
 ## Features
 
-* Chat with Mistral AI directly on Discord
-* Fast and easy setup
-* Supports multiple Discord servers
+- AI-powered conversation using Mistral AI
+- Custom facts and jokes storage per user
+- Conversation history and context
+- Slash commands for managing bot behavior
+- Customizable system prompt
 
----
+## Installation
 
-## License
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/safi-ai-bot.git
+   cd safi-ai-bot
+   ```
 
-[MIT](LICENSE)
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+3. **Set up configuration**:
+   - Copy `config.sample.json` to `config.json`
+   - Edit `config.json` with your actual credentials:
+     - Mistral API key (get from [Mistral AI](https://mistral.ai/))
+     - Discord bot token (create a bot at [Discord Developer Portal](https://discord.com/developers/applications))
+     - Your server/guild ID
+     - Your user ID (for allowed users)
+
+4. **Run the bot**:
+   ```bash
+   python main.py
+   ```
+
+## Configuration
+
+The bot uses a JSON configuration file (`config.json`). Here's what each section does:
+
+- `credentials`: API keys and tokens
+- `bot`: Bot behavior and Discord-specific settings
+- `database`: Database file locations and limits
+- `ai`: AI model settings and limits
+- `memory`: Memory and customization limits
+- `logging`: Logging settings
+
+## Usage
+
+Once running, the bot will respond to:
+- Mentions of the bot
+- Messages containing "marwat" (case insensitive)
+- Slash commands for managing facts, jokes, and system prompt
+
+## Slash Commands
+
+- `/system_prompt` - View or edit the bot's system prompt
+- `/add_fact` - Add facts about a user
+- `/remove_fact` - Remove facts about a user
+- `/show_fact` - Show all facts about a user
+- `/add_joke` - Add jokes/roasts for a user
+- `/remove_joke` - Remove jokes/roasts for a user
+- `/show_joke` - Show all jokes/roasts for a user
+
+## Customization
+
+You can customize:
+- The system prompt in `system_prompt.json`
+- Memory limits in `config.json`
+- AI model and behavior in `config.json`
 
