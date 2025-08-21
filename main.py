@@ -1,8 +1,8 @@
 """
-Safi AI Bot - Main Application File
+AI Bot - Main Application File
 
 This file contains the main bot implementation, command handlers,
-and message processing logic for the Safi AI Discord bot.
+and message processing logic for the AI Discord bot.
 """
 
 import json
@@ -629,7 +629,7 @@ async def on_ready():
 # --- Run Bot ---
 if __name__ == "__main__":
     try:
-        logging.info("Starting Safi AI Bot...")
+        logging.info("Starting AI Bot...")
 
         # Check if we're using placeholder token
         if DISCORD_BOT_TOKEN == "YOUR_DISCORD_BOT_TOKEN_HERE" or "REPLACE_" in str(DISCORD_BOT_TOKEN):
@@ -649,3 +649,4 @@ if __name__ == "__main__":
         logging.error(f"Failed to start bot: {str(e)}")
 
         raise
+
