@@ -14,8 +14,8 @@ A Discord bot with AI capabilities for conversation, memory, and customization.
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/safi-ai-bot.git
-   cd safi-ai-bot
+   git clone https://github.com/sennvacan/discord-mistral-chatbot
+   cd discord-mistral-chatbot
    ```
 
 2. **Install dependencies**:
@@ -70,6 +70,7 @@ You can customize:
 - The system prompt in `system_prompt.json`
 - Memory limits in `config.json`
 - AI model and behavior in `config.json`
+
 
 
 
